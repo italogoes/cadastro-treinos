@@ -2,6 +2,8 @@ import express from 'express';
 const mongoose = require('mongoose');
 const cors = require('cors')
 const bodyParser = require('body-parser');
+const multer = require('multer')
+const path = require('path')
 
 // Controllers
 const exercioController = require('./controllers/exercicioController')
@@ -9,8 +11,22 @@ const exercioController = require('./controllers/exercicioController')
 const app = express()
 const port = 4000
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors())
+
+// Configurar o middleware Multer para o upload de imagens
+const storage = multer.diskStorage({
+    destination: (req: any, file: any, cb: any) => {
+        cb(null, 'uploads/');
+    },
+    filename: (req: any, file: any, cb: any) => {
+        const ext = path.extname(file.originalname);
+        cb(null, Date.now() + ext);
+    },
+});
+
+const upload = multer({ storage });
 
 // Routes
 app.get('/', (req: any, res: any) => {
@@ -18,7 +34,7 @@ app.get('/', (req: any, res: any) => {
 })
 
 app.get('/exercicios', exercioController.searchExercicio)
-app.post('/exercicios', exercioController.createExercicio)
+app.post('/exercicios', upload.single('imagem'), exercioController.createExercicio)
 
 app.listen(port, () => {
     console.log(`Servidor ligado na porta: ${port}!`)
