@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 const bodyParser = require('body-parser');
 const upload = require('./config/multer')
-const path = require('path')
 
 // Controllers
 const exercioController = require('./controllers/exercicioController')
@@ -17,10 +16,6 @@ app.use(bodyParser.json());
 app.use(cors())
 
 // Routes
-app.get('/', (req: any, res: any) => {
-    res.send('ola')
-})
-
 app.get('/exercicios', exercioController.searchExercicio)
 app.post('/exercicios', upload.single('file'), exercioController.createExercicio)
 
