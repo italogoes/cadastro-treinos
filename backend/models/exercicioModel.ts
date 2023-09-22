@@ -17,7 +17,10 @@ const exercicioSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    imagePath: String
+    src: {
+        type: String,
+        require: true
+    }
 })
 
 const Exercicio = mongoose.model('Exercicio', exercicioSchema)
