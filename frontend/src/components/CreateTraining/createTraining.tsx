@@ -26,6 +26,12 @@ const CreateTraining: React.FC = () => {
             });
 
             console.log('Exercício cadastrado com sucesso!', response.data);
+
+            setNome('')
+            setDescricao('')
+            setDiaSemana('Selecione um dia')
+            setFile(null)
+            
         } catch (error) {
             console.log('Não foi possível cadastrar o exercício.', error);
         }
@@ -42,7 +48,7 @@ const CreateTraining: React.FC = () => {
 
             <div className='form-cadastrar-exercicio'>
                 <form onSubmit={handleSubmit}>
-                    
+
                     <label>
                         Nome do treino:<br></br>
                         <input
