@@ -6,6 +6,7 @@ const upload = require('./config/multer')
 
 // Controllers
 const exercioController = require('./controllers/exercicioController')
+const userResgisterController = require('./controllers/userRegisterController')
 
 const app = express()
 const port = 4000
@@ -15,9 +16,13 @@ app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
 app.use(cors())
 
-// Routes
+// Routes Exercícios
 app.get('/exercicios', exercioController.searchExercicio)
 app.post('/exercicios', upload.single('file'), exercioController.createExercicio)
+
+// Routes Users
+app.post('/registrar', userResgisterController.createUser)
+app.post('/entrar', userResgisterController.loginUser)
 
 app.listen(port, () => {
     console.log(`Servidor ligado na porta: ${port}!`)
