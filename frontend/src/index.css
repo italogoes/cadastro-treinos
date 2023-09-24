@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
+
+*{
+    font-family: 'Inclusive Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*Inicio da estilização*/
+main{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    text-align: center;
+    padding: 50px 0;
+}
+
+main h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.lista-dias-semana{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.lista-dias-semana ul li {
+    margin: 20px 0;
+}
+
+.btn-cadastrar{
+    background-color: #097e17;
+    color: #fff;
+    cursor: pointer;
+    width: 190px;
+    display: block;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+
+.btn-dia-semana{
+    background-image: linear-gradient(to right, #e53935 0%, #e35d5b 51%, #e53935 100%);
+    color: #fff;
+    cursor: pointer;
+    width: 190px;
+    display: block;
+    border-radius: 4px;
+    padding: 10px 0;
+}

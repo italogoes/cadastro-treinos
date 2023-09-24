@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactElement } from "react"
+import { useState, useEffect } from "react"
 import axios from "axios"
 
 interface Exercicio {
@@ -31,11 +31,11 @@ const Monday = () => {
 
     return(
         <>
-            <h1>Exercícios da Segunda-Feira</h1>
+            <h2>Exercícios da Segunda-Feira</h2>
             {data.map((item) => (
                 <div key={item.id}>
-                    <h1>Exercício: {item.nome}</h1>
-                    <img src={`http://localhost:4000/${item.src}`} alt="" />
+                    <h4>Exercício: {item.nome}</h4>
+                    <img src={`http://localhost:4000/${item.src}`} alt="Imagem representando o treino" />
                     <p>Séries: {item.descricao}</p>
                 </div>
             ))}
