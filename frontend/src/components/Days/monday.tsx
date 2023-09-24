@@ -30,16 +30,16 @@ const Monday = () => {
     console.log(data)
 
     return(
-        <>
+        <div className="exercicios-container">
             <h2>Exercícios da Segunda-Feira</h2>
             {data.map((item) => (
-                <div key={item.id}>
-                    <h4>Exercício: {item.nome}</h4>
-                    <img src={`http://localhost:4000/${item.src}`} alt="Imagem representando o treino" />
-                    <p>Séries: {item.descricao}</p>
+                <div key={item.id} className="exercicio-single">
+                    <h4 className="nome">Exercício: {item.nome}</h4>
+                    <img className="imagem" src={`http://localhost:4000/${item.src}`} alt="Imagem representando o treino" />
+                    <p className="series">Séries: {item.descricao}</p>
                 </div>
             ))}
-        </>
+        </div>
     )
 }
 

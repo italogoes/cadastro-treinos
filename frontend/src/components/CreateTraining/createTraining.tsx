@@ -26,6 +26,7 @@ const CreateTraining: React.FC = () => {
             });
 
             console.log('Exercício cadastrado com sucesso!', response.data);
+            alert('Exercício cadastrado com sucesso!')
 
             setNome('')
             setDescricao('')
