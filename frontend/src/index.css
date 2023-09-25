@@ -15,17 +15,46 @@ ul{
     list-style-type: none;
 }
 
+/*Estilos da Header*/
+.container{
+    padding: 20px 2%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.header a{
+    border: 1px solid #32a0ff;
+    border-radius: 4px;
+    color: #32a0ff;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.user img{
+    width: 40px;
+    height: 40px;
+}
+
 /*Inicio da estilização da home*/
 main{
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-image: url('../assets/img/home-img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     text-align: center;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 main h1{
     font-size: 40px;
     font-weight: 600;
+    color: #fff;
 }
 
 .lista-dias-semana{
@@ -49,7 +78,7 @@ main h1{
 }
 
 .btn-dia-semana{
-    background-image: linear-gradient(to right, #e53935 0%, #e35d5b 51%, #e53935 100%);
+    background-color: #32a0ff;
     color: #fff;
     cursor: pointer;
     width: 390px;
@@ -147,6 +176,7 @@ main h1{
     padding: 20px;
     margin-bottom: 200px;
 }
+
 .exercicios-container h2{
     padding: 50px 0;
     margin-bottom: 50px;
@@ -155,7 +185,7 @@ main h1{
 }
 
 .exercicio-single .nome{
-    font-size: 30px;
+    font-size: 22px;
     margin-bottom: 20px;
     background-color: #8EC5FC;
     padding: 10px;

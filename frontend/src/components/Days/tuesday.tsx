@@ -9,7 +9,7 @@ interface Exercicio {
     diaSemana: string
 }
 
-const Monday = () => {
+const Tuesday = () => {
     const [data, setData] = useState<Exercicio[]>([])
 
     useEffect(() => {
@@ -32,9 +32,9 @@ const Monday = () => {
 
     return (
         <div className="exercicios-container">
-            <h2>Exercícios da Segunda-Feira</h2>
+            <h2>Exercícios da Terça-Feira</h2>
             {data.map((item) => (
-                item.diaSemana == 'segunda' ? (
+                item.diaSemana == 'terca' ? (
                     <div key={item.id} className="exercicio-single">
                         <h4 className="nome">Exercício: {item.nome}</h4>
                         <img className="imagem" src={`http://localhost:4000/${item.src}`} alt="Imagem representando o treino" />
@@ -46,4 +46,4 @@ const Monday = () => {
     )
 }
 
-export default Monday
+export default Tuesday

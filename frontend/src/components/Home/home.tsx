@@ -21,22 +21,22 @@ const Home = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/monday" className='btn-dia-semana'>
+                            <NavLink to="/tuesday" className='btn-dia-semana'>
                                 Terça-feira
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/monday" className='btn-dia-semana'>
+                            <NavLink to="/wednesday" className='btn-dia-semana'>
                                 Quarta-feira
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/monday" className='btn-dia-semana'>
+                            <NavLink to="/thursday" className='btn-dia-semana'>
                                 Quinta-feira
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/monday" className='btn-dia-semana'>
+                            <NavLink to="/friday" className='btn-dia-semana'>
                                 Sexta-feira
                             </NavLink>
                         </li>
