@@ -19,6 +19,7 @@ app.use(cors())
 // Routes Exercícios
 app.get('/exercicios', exercioController.searchExercicio)
 app.post('/exercicios', upload.single('file'), exercioController.createExercicio)
+app.delete('/exercicios/:id', exercioController.deleteExercicio)
 
 // Routes Users
 app.post('/registrar', userResgisterController.createUser)

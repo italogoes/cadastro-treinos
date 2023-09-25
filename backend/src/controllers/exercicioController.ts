@@ -31,3 +31,21 @@ exports.searchExercicio = async (req: any, res: any) => {
         res.status(500).json({ message: 'Erro ao buscar os dados no banco...', error });
     }
 };
+
+exports.deleteExercicio = async (req: any, res: any) => {
+    try {
+        const exercicioId = req.params.id;
+
+        const exercicio = await exercicioModel.findById(exercicioId)
+
+        if (!exercicio) {
+            return res.status(404).json({ message: 'Exercício não encontrado.' });
+        }
+
+        await exercicioModel.findByIdAndDelete(exercicioId)
+
+        res.status(204).json({ message: 'Exercicio escluido com sucesso!.' });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao excluir exercício.', error });
+    }
+}

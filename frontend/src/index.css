@@ -206,6 +206,14 @@ main h1{
     background-color: #eee;
 }
 
+.btn-excluir-exercicio{
+    background-color: #eee;
+    border: none;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 600px) {
     .exercicio-single .imagem{
         width: 100%;
